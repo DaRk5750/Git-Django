@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from app1.models import registation
-
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
@@ -14,6 +14,7 @@ def login(request):
     return render(request, 'login.html')
 
 
+@csrf_exempt
 def newregister(request):
     print("heep")
     if request.method == 'POST':
@@ -32,6 +33,7 @@ def newregister(request):
     return render(request, 'index.html')
 
 
+@csrf_exempt
 def loginuser(request):
     if request.method == 'POST':
         username = request.POST['username']
