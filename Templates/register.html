@@ -1,0 +1,23 @@
+<html>
+
+<head>
+<title> Demo1 </title>
+
+</head>
+
+<body>
+
+  <center>
+    <h1>Register</h1> 
+    <form method='POST' action='/newregister'>
+        {% csrf_token %}
+        UserName <input type="text" name="username" placeholder="Name">
+        Password <input type="text" name="password" placeholder="Password">
+        Age <input type="integer" name="age" placeholder="Age">
+        <button type="submit" >Register</button>
+    </form>
+  </center>
+
+</body>
+
+</html>
