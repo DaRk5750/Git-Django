@@ -14,7 +14,7 @@ def login(request):
     return render(request, 'login.html')
 
 
-# @csrf_exempt
+@csrf_exempt
 def newregister(request):
     print("heep")
     if request.method == 'POST':
@@ -33,7 +33,7 @@ def newregister(request):
     return render(request, 'index.html')
 
 
-# @csrf_exempt
+@csrf_exempt
 def loginuser(request):
     if request.method == 'POST':
         username = request.POST['username']
